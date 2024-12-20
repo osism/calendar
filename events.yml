@@ -1,0 +1,11 @@
+---
+name: Events
+timezone: Europe/Berlin
+events:
+  - summary: "CloudFest"
+    begin: 2025-03-18
+    location: Europa-Park
+    repeat:
+      interval:
+        days: 1
+      until: 2025-03-20
