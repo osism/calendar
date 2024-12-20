@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSISM Community Calendar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="calendar" style="max-width: 1000px; margin: 0 auto;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+
+  <script>
+    async function loadICS(url) {
+      try {
+        const response = await fetch(url);
+        const icsData = await response.text();
+
+        const jcalData = ICAL.parse(icsData);
+        const vcalendar = new ICAL.Component(jcalData);
+        const vevents = vcalendar.getAllSubcomponents('vevent');
+
+        const events = vevents.map(vevent => {
+          const event = new ICAL.Event(vevent);
+          return {
+            title: event.summary || 'No title',
+            start: event.startDate.toJSDate(),
+            end: event.endDate.toJSDate(),
+          };
+        });
+
+        return events;
+      } catch (error) {
+        console.error('Error loading ICS file:', error);
+        return [];
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const calendarEl = document.getElementById('calendar');
+      const icsUrl = 'https://osism.tech/calendar/osism.ics';
+      const events = await loadICS(icsUrl);
+
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay',
+        },
+        events: events,
+        slotMinTime: '08:00:00',
+        slotMaxTime: '21:00:00',
+        locale: 'en',
+        slotLabelFormat: {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false,
+        },
+        eventTimeFormat: {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false,
+        },
+      });
+
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
