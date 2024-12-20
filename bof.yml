@@ -1,5 +1,5 @@
 ---
-name: One-Time Events
+name: One-Time Meetings
 timezone: Europe/Berlin
 events:
   - summary: "BoF: BGP reference architecture"
