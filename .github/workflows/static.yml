@@ -29,11 +29,11 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
       - name: Install dependencies
-        run: pip install yaml2ics
+        run: pip install yaml2ics markdown2
       - name: Generate osism.ics
         run: yaml2ics main.yml > calendar/osism.ics
-      - name: Copy README.md file
-        run: cp README.md calendar/README.md
+      - name: Generate index.html file
+        run: markdown2 README.md > calendar/index.html
       - name: Upload osism.ics
         uses: actions/upload-pages-artifact@v3
         with:
