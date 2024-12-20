@@ -1,0 +1,13 @@
+---
+name: One-Time Events
+timezone: Europe/Berlin
+events:
+  - summary: "BoF: BGP reference architecture"
+    begin: 2025-01-13 11:05:00
+    duration:
+      minutes: 50
+    description: |
+      The use of BGP on network, router and load balancer nodes should
+      be harmonised and documented as far as possible. This BoF meeting
+      is the starting point for this. Further meetings will follow.
+    location: "https://jitsi.regio.digital/osism"
