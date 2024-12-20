@@ -1,0 +1,11 @@
+---
+- name: Run
+  hosts: all
+
+  tasks:
+    - name: Run yaml2ics
+      ansible.builtin.shell:
+        executable: /bin/bash
+        chdir: "{{ zuul.project.src_dir }}"
+        cmd: yaml2ics main.yml
+      changed_when: false
