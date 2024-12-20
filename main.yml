@@ -1,0 +1,6 @@
+---
+name: Calendar of OSISM related events
+timezone: Europe/Berlin
+include:
+  - one-time.yml
+  - regular.yml

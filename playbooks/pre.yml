@@ -1,0 +1,17 @@
+---
+- name: Pre
+  hosts: all
+
+  roles:
+    - ensure-pip
+
+  tasks:
+    - name: Run install script
+      ansible.builtin.shell:
+        executable: /bin/bash
+        chdir: "{{ zuul.project.src_dir }}"
+        cmd: |
+          set -e
+          set -x
+          sudo pip3 install --break-system-packages yaml2ics
+      changed_when: false

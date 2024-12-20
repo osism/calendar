@@ -1,10 +1,21 @@
 ---
+- job:
+    name: calendar-yaml2ics
+    nodeset: ubuntu-noble
+    parent: base
+    pre-run: playbooks/pre.yml
+    run: playbooks/run.yml
+
 - project:
     merge-mode: squash-merge
     default-branch: main
     check:
       jobs:
+        - ansible-lint
+        - calendar-yaml2ics
         - yamllint
     periodic-daily:
       jobs:
+        - ansible-lint
+        - calendar-yaml2ics
         - yamllint
