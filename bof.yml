@@ -10,4 +10,4 @@ events:
       The use of BGP on network, router and load balancer nodes should
       be harmonised and documented as far as possible. This BoF meeting
       is the starting point for this. Further meetings will follow.
-    location: "https://jitsi.regio.digital/osism"
+    url: "https://jitsi.regio.digital/osism"
