@@ -11,3 +11,12 @@ events:
       be harmonised and documented as far as possible. This BoF meeting
       is the starting point for this. Further meetings will follow.
     url: "https://jitsi.regio.digital/osism"
+  - summary: "BoF: Neutron VPNaaS with OVN"
+    begin: 2025-01-22 10:05:00
+    duration:
+      minutes: 25
+    description: |
+      Neutron VPNaaS is currently not usable with OVN due to various problems.
+      This BOF meeting is the starting point to discuss how to get Neutron VPNaaS
+      with OVN production ready quickly. Further meetings will follow.
+    url: "https://jitsi.regio.digital/osism"
