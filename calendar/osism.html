@@ -49,12 +49,12 @@
   <div id="calendar" style="max-width: 1000px; margin: 0 auto;"></div>
 
   <div id="eventPopup">
-    <div id="popupContent">
+    <div id="popupContent" style="text-align: left">
       <span class="closeBtn">&times;</span>
       <h3 id="popupTitle">Event Title</h3>
       <p><strong>Start:</strong> <span id="popupStart"></span><br/>
       <strong>End:</strong> <span id="popupEnd"></span></p>
-      <p id="popupDescription">No description available</p>
+      <p><span id="popupDescription">No description</span></p>
     </div>
   </div>
 
@@ -79,6 +79,7 @@
             title: event.summary || 'No title',
             start: event.startDate.toJSDate(),
             end: event.endDate.toJSDate(),
+            description: event.description,
           };
         });
 
@@ -98,6 +99,7 @@
       const popupStart = document.getElementById('popupStart');
       const popupEnd = document.getElementById('popupEnd');
       const popupDescription = document.getElementById('popupDescription');
+      const popupLocation = document.getElementById('popupLocation');
       const closeBtn = document.querySelector('.closeBtn');
 
       closeBtn.onclick = () => popup.style.display = 'none';
@@ -135,7 +137,7 @@
           popupTitle.textContent = event.title || 'No Title';
           popupStart.textContent = event.start ? event.start.toLocaleString() : 'N/A';
           popupEnd.textContent = event.end ? event.end.toLocaleString() : 'N/A';
-          popupDescription.textContent = event.extendedProps.description || 'No description available';
+          popupDescription.textContent = event.extendedProps.description || 'No description';
 
           popup.style.display = 'block';
         },
