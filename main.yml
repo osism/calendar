@@ -3,5 +3,6 @@ name: Calendar of OSISM related events
 timezone: Europe/Berlin
 include:
   - bof.yml
-  - regular.yml
   - events.yml
+  - regular.yml
+  - scs.yml

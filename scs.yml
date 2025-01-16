@@ -1,0 +1,17 @@
+# Scheduled events from the SCS project that are replicated here for better
+# visibility from https://github.com/SovereignCloudStack/calendar.
+---
+name: SCS Meetings
+timezone: Europe/Berlin
+events:
+  - summary: "SCS: Community Meeting"
+    begin: 2025-01-16 15:05:00
+    duration:
+      minutes: 40
+    location: "https://conf.scs.koeln:8443/SCS-Tech"
+  - summary: "SCS: Resumption of SIG Standardization/Certification"
+    begin: 2025-01-16 14:05:00
+    duration:
+      minutes: 50
+    description: |
+    location: "https://conf.scs.koeln:8443/SCS-Tech"
