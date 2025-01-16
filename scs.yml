@@ -8,10 +8,10 @@ events:
     begin: 2025-01-16 15:05:00
     duration:
       minutes: 40
-    location: "https://conf.scs.koeln:8443/SCS-Tech"
+    url: "https://conf.scs.koeln:8443/SCS-Tech"
   - summary: "SCS: Resumption of SIG Standardization/Certification"
     begin: 2025-01-16 14:05:00
     duration:
       minutes: 50
     description: |
-    location: "https://conf.scs.koeln:8443/SCS-Tech"
+    url: "https://conf.scs.koeln:8443/SCS-Tech"
