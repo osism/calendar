@@ -20,7 +20,7 @@ events:
       This BOF meeting is the starting point to discuss how to get Neutron VPNaaS
       with OVN production ready quickly. Further meetings will follow.
   - summary: "BoF: The future of Cloud in a Box"
-    begin: 2025-01-29 10:05:00
+    begin: 2025-01-28 10:05:00
     duration:
       minutes: 50
     description: The future of Cloud in a Box will be discussed and defined here.
