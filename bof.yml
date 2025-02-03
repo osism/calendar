@@ -25,3 +25,9 @@ events:
       minutes: 50
     description: The future of Cloud in a Box will be discussed and defined here.
     url: "https://jitsi.regio.digital/osism"
+  - summary: "BoF: The future of Central Services"
+    begin: 2025-02-05 11:05:00
+    duration:
+      minutes: 50
+    description: The future of Central Services like OpenSearch or Wazuh will be discussed.
+    url: "https://jitsi.regio.digital/osism"
