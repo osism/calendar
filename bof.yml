@@ -31,3 +31,9 @@ events:
       minutes: 50
     description: The future of Central Services like OpenSearch or Wazuh will be discussed.
     url: "https://meet.jit.si/osism"
+  - summary: "BoF: The future of Cluster API and Magnum"
+    begin: 2025-02-12 11:05:00
+    duration:
+      minutes: 50
+    description: The future of the Cluster API and Magnum integration.
+    url: "https://meet.jit.si/osism"
