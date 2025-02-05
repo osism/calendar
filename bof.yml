@@ -10,7 +10,7 @@ events:
       The use of BGP on network, router and load balancer nodes should
       be harmonised and documented as far as possible. This BoF meeting
       is the starting point for this. Further meetings will follow.
-    url: "https://jitsi.regio.digital/osism"
+    url: "https://meet.jit.si/osism"
   - summary: "BoF: Neutron VPNaaS with OVN"
     begin: 2025-01-22 10:05:00
     duration:
@@ -24,10 +24,10 @@ events:
     duration:
       minutes: 50
     description: The future of Cloud in a Box will be discussed and defined here.
-    url: "https://jitsi.regio.digital/osism"
+    url: "https://meet.jit.si/osism"
   - summary: "BoF: The future of Central Services"
     begin: 2025-02-05 11:05:00
     duration:
       minutes: 50
     description: The future of Central Services like OpenSearch or Wazuh will be discussed.
-    url: "https://jitsi.regio.digital/osism"
+    url: "https://meet.jit.si/osism"
